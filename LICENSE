@@ -1,0 +1,31 @@
+GW2 Performance Inspector
+Copyright (c) 2026 Tenga (https://github.com/t3ng4)
+
+This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+License (CC BY-NC-ND 4.0).
+
+  Summary (human-readable): https://creativecommons.org/licenses/by-nc-nd/4.0/
+  Full legal code:          https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+In short – you may:
+  * use the app for free, and
+  * copy and share it in unchanged form,
+
+under these conditions:
+  * Attribution   – keep the copyright, the credits (About & Credits page, README, release notes) and this license
+                    notice intact, and give appropriate credit to the author.
+  * NonCommercial – you may not use the app or copies of it for commercial purposes (for example selling it,
+                    bundling it with a paid product or service, or putting it behind a paywall).
+  * NoDerivatives – you may not share modified versions of the app, its code, its artwork or its credits.
+
+This summary is not a substitute for the legal code linked above, which is the binding license text.
+
+Third-party parts
+  * The Python packages the installers download (PySide6 / Qt, NumPy, Requests) and the optional tools the app can
+    download on request (llama.cpp, Qwen models, Elite Insights, GW2_EI_log_combiner / TopStats, the .NET runtime)
+    are not part of this work and remain under their own licenses. They are installed from their official sources
+    and run as separate programs.
+  * The Buka crown emblem and logo belong to the guild [Buka] Bookah; the QWOP logo and theme belong to QWOP
+    (created by Chase). Both are included with permission and may not be used outside this app.
+  * Guild Wars 2 and all related names and images are trademarks of ArenaNet, LLC. This app is a fan-made tool and
+    is not affiliated with or endorsed by ArenaNet or NCSOFT.
