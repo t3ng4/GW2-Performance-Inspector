@@ -29,8 +29,8 @@ Get the file for your system from the **[latest release](../../releases/latest)*
 | System | File | |
 |---|---|---|
 | **Windows 10 / 11** (64-bit) | `GW2-PerformanceInspector-<version>-Windows.zip` | unzip, double-click the .exe |
-| **Linux** (64-bit, glibc 2.35+: Ubuntu 22.04+, Debian 12+, Mint 21+, Fedora 36+, Arch, CachyOS, Garuda, …) | `GW2-PerformanceInspector-1.5.0-Linux.AppImage` | one file, make it executable |
-| **In-game overlay** (optional, Windows game client – also under Proton / Wine) | `GW2-PerformanceInspector-Overlay-1.5.0.zip` | `arcdps_gw2pi.dll` – into `addons/` with Nexus, into the game folder with arcdps only |
+| **Linux** (64-bit, glibc 2.35+: Ubuntu 22.04+, Debian 12+, Mint 21+, Fedora 36+, Arch, CachyOS, Garuda, …) | `GW2-PerformanceInspector-1.5.1-Linux.AppImage` | one file, make it executable |
+| **In-game overlay** (optional, Windows game client – also under Proton / Wine) | `GW2-PerformanceInspector-Overlay-1.5.1.zip` | `arcdps_gw2pi.dll` – into `addons/` with Nexus, into the game folder with arcdps only |
 
 Both are complete: no Python, no installer, no admin rights. Your logs, stats and settings stay on your PC.
 
@@ -45,8 +45,8 @@ Both are complete: no Python, no installer, no admin rights. Your logs, stats an
 
 ### Linux
 ```bash
-chmod +x GW2-PerformanceInspector-1.5.0-Linux.AppImage
-./GW2-PerformanceInspector-1.5.0-Linux.AppImage
+chmod +x GW2-PerformanceInspector-1.5.1-Linux.AppImage
+./GW2-PerformanceInspector-1.5.1-Linux.AppImage
 ```
 Or right-click the file → *Properties* → *Allow executing as program*, then double-click it.
 If nothing happens, install FUSE 2 once (`sudo apt install libfuse2` – on Ubuntu 24.04: `libfuse2t64`,
@@ -203,7 +203,7 @@ A GW2 API key is optional and stays on your PC.
 * **Healing is 0** – healing and barrier only exist in logs recorded with the arcdps *healing stats* addon.
 * **Enemy players have no names** – combat logs never contain them; enemies are shown by team colour.
 * **Check your download** – every file has a `.sha256` next to it:
-  Linux `sha256sum -c GW2-PerformanceInspector-1.5.0-Linux.AppImage.sha256` ·
+  Linux `sha256sum -c GW2-PerformanceInspector-1.5.1-Linux.AppImage.sha256` ·
   Windows (PowerShell) `Get-FileHash GW2-PerformanceInspector-*-Windows.zip` and compare.
 
 Found a bug or have an idea? Contact **Tenga** ([GitHub: t3ng4](https://github.com/t3ng4)). In the app,
