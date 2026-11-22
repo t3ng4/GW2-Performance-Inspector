@@ -28,7 +28,7 @@ Get the file for your system from the **[latest release](../../releases/latest)*
 
 | System | File | |
 |---|---|---|
-| **Windows 10 / 11** (64-bit) | `GW2-PerformanceInspector-<version>-Windows.zip` | unzip, double-click the .exe |
+| **Windows 10 / 11** (64-bit) | `GW2-PerformanceInspector-1.6.0-Windows.zip` | unzip, double-click the .exe |
 | **Linux** (64-bit, glibc 2.35+: Ubuntu 22.04+, Debian 12+, Mint 21+, Fedora 36+, Arch, CachyOS, Garuda, …) | `GW2-PerformanceInspector-1.6.0-Linux.AppImage` | one file, make it executable |
 | **In-game overlay** (optional, Windows game client – also under Proton / Wine) | `GW2-PerformanceInspector-Overlay-1.6.0.zip` | `arcdps_gw2pi.dll` – into `addons/` with Nexus, into the game folder with arcdps only |
 
@@ -56,8 +56,10 @@ If nothing happens, install FUSE 2 once (`sudo apt install libfuse2` – on Ubun
 A short introduction helps you set up:
 * a desktop icon, if you like (asked once – Settings can make one later),
 * your theme and your account (`Name.1234` – the one shown in the squad list),
-* your **arcdps log folder** – the app finds it for you, also in every Steam library on every drive,
-* the optional local AI and the game data (names and icons from the official Guild Wars 2 API).
+* your **arcdps log folder** – the app finds it for you, also in every Steam library on every drive.
+
+The game data (names and icons from the official Guild Wars 2 API) downloads by itself when the introduction ends
+and is refreshed once a month.
 
 Then drop your logs in, or let the app watch your log folder and import every new fight while you play.
 
@@ -78,22 +80,34 @@ Drop in your arcdps logs and every fight becomes numbers you can act on:
   early isn't judged on totals.
 * **Every number explained** – hover any column header or chart for its formula.
 * **Game icons next to every boon, condition and stat**, like Elite Insights and TopStats show them.
-* **A local AI coach** that explains fights, reports and game mechanics – it runs on your PC, nothing is sent away.
+* **One fight selection for the whole app** – the button at the top right of every page: tick days in a calendar,
+  or play sessions, folders and single fights in the fight library. An unticked fight is left out of every number
+  until you tick it again – nothing is deleted. It also shows how the pages count (selected → you took part → too
+  short → in your stats).
+* **Live session** – while you play, every new log is imported right away and *My Raids* shows the evening so far,
+  with a card of your last fight. Tick what you play for (DPS, Strip, Heal, Boon Support, Condition cleanse, Downs
+  contribution, Death) and your score and tips use only that. No popups take the keyboard from the game.
+* **A built-in parser that matches Elite Insights** – checked player by player: damage, cleanses, CC, deaths, downs
+  and dodges match exactly, boons, strips, healing and down contribution within 1 %.
+* **An AI assistant** that explains fights, reports and game mechanics – built-in answers by default, an optional
+  local AI that runs on your PC (nothing is sent away).
 
 ### Simple or Expert – you choose
 
 **Simple mode** (the default) keeps it to the basics: the **Overview** with your six key numbers – boon duration,
 healing, damage, condition damage, strips out and strips in – for all your fights or a single fight, each next to
-the average of your class and your squad. Plus Compare, Import, the Log Parser, the AI Assistant, the basic
-settings (incl. clearing your data) and About.
+the average of your class and your squad. Plus My Raids (with the live session), Compare, Import & Library, the Log
+Parser, the AI Assistant, the basic settings (incl. clearing your data) and About.
 
 Double-click any Overview panel for the details: a chart over your fights (or second by second for one fight) and
 the ranking of the squad.
 
 ![Overview details](screenshots/overview-details.png)
 
-**Expert mode** shows every page and setting, sorted into categories. Switch any time with the button next to
-◀ ▶ at the top of the navigation.
+**Expert mode** shows every page and setting in four groups: *Overview* (Overview, Dashboard, Players, Compare,
+My Raids), *My performance* (Performance Review, Support & Defense, Offensive & Strips, Deaths & Positioning,
+Inspect Me), *Fights & logs* (Import & Library, Log Parser, Fights, Log Summary) and *Tools*. Switch any time with
+the button next to ◀ ▶ at the top of the navigation.
 
 ![Expert mode – Compare with stat icons](screenshots/expert-compare-icons.png)
 
@@ -110,6 +124,16 @@ Right-click any fight or report → **Export HTML…** to save it as a page you 
 ---
 
 ## A tour
+
+### My Raids and the live session
+One page for the evening: the **Live session** panel (every new log imported right away, the session so far, a card
+of your last fight and *Rate me for*), Raid Night, Leaderboards, Squad Lead, Squads & Guilds and the squad
+composition – as panels you arrange yourself.
+
+### Inspect Me – your own improvement
+**Your share of the squad** (your part of the squad's healing, stability, damage … per fight, against what your
+role usually brings), a **Practice plan** with three targets for your next session, plus Trends, Progress and the
+Skill Coach (BETA).
 
 ### Players – everyone you fought with
 Click any player to see all their stats in category tabs, compared with the average and the top 10 % of their class.
@@ -140,25 +164,27 @@ the top performer.
 ![Fight report with AI Coach](screenshots/ai-coach.png)
 
 ### Log Summary and the Log Parser
-TopStats-style tables for a whole session, and a built-in **Log Parser** that turns a play session into a shareable
-report – with the app's own parser or with Elite Insights + TopStats.
+TopStats-style tables for a whole session, and the **Log Parser** that turns a play session into a shareable report
+with one of four engines: the app's own parser, the EI Log Combiner (Elite Insights + TopStats), TopStatsAIO or
+Legacy TopStats – or *Compare* the built-in parser with Elite Insights side by side. The parser has its own
+workspace: parsing never changes your stats.
 
 ![Log Summary](screenshots/log-summary.png)
 
 ![Log Parser](screenshots/log-parser.png)
 
 ### Trends and the Performance Review
-Follow your stats over time with role-based trend cards, and get a full review with benchmarks that adjust to the
-players in your logs.
+Follow your stats over time with role-based trend cards (on Inspect Me), and get a full review with benchmarks that
+adjust to the players in your logs.
 
 ![Trends](screenshots/trends.png)
 
 ![Performance Review](screenshots/performance-review.png)
 
 ### Raid Night – for commanders
-One evening on one page: results, who carried (top 3 per job), who died most and the likely reason, and boon uptime
-per subgroup. Pick the evening with **📅 Days** (every player page has it) and use *Copy as image* to post it in
-Discord.
+One evening on one page (a panel of My Raids): results, who carried (top 3 per job), who died most and the likely
+reason, and boon uptime per subgroup. Pick the evening with the fight selection and use *Copy as image* to post it
+in Discord.
 
 ![Raid Night](screenshots/raid-night.png)
 
@@ -170,28 +196,34 @@ Discord.
 <img src="screenshots/intro-themes.png" width="620" alt="Theme choice">
 
 ### And more
-Leaderboards, Squad Lead tools, Squads & Guilds (win rates by map, size, commander and time, guild rosters), History
-with session report cards, Progress with goals and personal bests, Skill Coach with build checks and cooldown usage,
-back / forward navigation, log folders with a fight library and log sessions, pages you arrange yourself (panels you
-drag into place), an in-game overlay (arcdps / Nexus) to start log sessions and parse from inside the game – and maybe a little secret or two.
+Squads & Guilds (win rates by map, size, commander and time, guild rosters), History with session charts (a tab of
+Fights), Progress with goals and personal bests, Skill Coach with build checks and cooldown usage, notes on play
+sessions and logs, players in a floating window or added to Compare from anywhere, back / forward navigation, log
+folders with a fight library and log sessions, pages you arrange yourself (panels you drag into place), an in-game
+overlay (arcdps / Nexus) to start log sessions, see the live session and parse from inside the game – and maybe a
+little secret or two.
 
 ---
 
 ## Optional extras
 
-The app downloads these only when you ask for them (Settings → *Updates & tools*, in Expert mode):
+The app downloads these only when you use them, and keeps the parser tools on their newest release (checked once a
+day when the app starts):
 
 | Extra | What for | Needs |
 |---|---|---|
-| Local AI (Qwen via llama.cpp) | AI Coach and AI Assistant | 1.2 GB (Light) or 2.6 GB (Standard) download; runs on your graphics card or CPU |
-| Elite Insights | numbers identical to dps.report, EI fight pages | the [.NET 8 runtime](https://dotnet.microsoft.com/download/dotnet/8.0) (Linux: or Wine) |
-| TopStats combiner | TopStats session reports | `python3` installed on the PC (it is a separate Python program) |
+| Local AI (Qwen via llama.cpp) | AI Coach and AI Assistant with a real language model (Settings → AI, Expert mode) | 1.2 GB (Light) or 2.6 GB (Standard) download; runs on your graphics card or CPU |
+| Elite Insights | EI Log Combiner, Legacy TopStats, TopStatsAIO, Compare, EI fight pages | .NET 10 – when it is not installed, the app downloads Microsoft's runtime into its own tools folder (no Wine) |
+| EI Log Combiner (TopStats) | TopStats session reports | Windows: nothing (TopStats.exe); Linux: `python3` installed on the PC |
+| Legacy TopStats | the older TopStats WvW Log Review | `python3` installed on the PC (Windows and Linux) |
+| TopStatsAIO | darkharasho's all-in-one parser in its own window | nothing extra |
 
 ## Privacy
 
 Everything runs on your computer. Your logs, stats and settings stay in your user folder. The app only goes online
 to download game data and icons (official Guild Wars 2 API and render service, Guild Wars 2 wiki), the optional
-AI model (Hugging Face) and – if you choose to – Elite Insights, TopStats or dps.report pages.
+AI model (Hugging Face), the parser tools you use (from their GitHub releases, plus Microsoft's .NET runtime for
+Elite Insights) and – if you choose to – dps.report pages.
 A GW2 API key is optional and stays on your PC.
 
 ## Questions & problems
